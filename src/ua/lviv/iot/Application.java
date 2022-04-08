@@ -10,7 +10,7 @@ import ua.lviv.iot.hospitalModel.paramedic.Paramedic;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Main {
+public class Application {
 
     public static void main(String[] args) {
 
