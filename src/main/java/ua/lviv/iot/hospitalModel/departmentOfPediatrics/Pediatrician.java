@@ -1,4 +1,4 @@
-package ua.lviv.iot.hospitalModel.department_of_pediatrics;
+package ua.lviv.iot.hospitalModel.departmentOfPediatrics;
 
 import ua.lviv.iot.hospitalModel.Department;
 import ua.lviv.iot.hospitalModel.Hospital;

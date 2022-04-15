@@ -1,4 +1,4 @@
-package ua.lviv.iot.hospitalModel.department_of_surgery;
+package ua.lviv.iot.hospitalModel.departmentOfSurgery;
 
 import ua.lviv.iot.hospitalModel.Department;
 import ua.lviv.iot.hospitalModel.Hospital;
@@ -15,5 +15,6 @@ public class Neurosurgeon extends Hospital {
         System.out.println("I help you with your nervous system");
 
     }
+
 
 }

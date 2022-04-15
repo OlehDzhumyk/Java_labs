@@ -3,14 +3,14 @@ package ua.lviv.iot;
 import ua.lviv.iot.hospitalManeger.HospitalManagerImpl;
 import ua.lviv.iot.hospitalModel.Department;
 import ua.lviv.iot.hospitalModel.Hospital;
-import ua.lviv.iot.hospitalModel.department_of_pediatrics.Pediatrician;
-import ua.lviv.iot.hospitalModel.department_of_surgery.Neurosurgeon;
+import ua.lviv.iot.hospitalModel.departmentOfPediatrics.Pediatrician;
+import ua.lviv.iot.hospitalModel.departmentOfSurgery.Neurosurgeon;
 import ua.lviv.iot.hospitalModel.paramedic.Paramedic;
 
 import java.util.LinkedList;
 import java.util.List;
 
-public class Main {
+public class Application {
 
     public static void main(String[] args) {
 
@@ -39,8 +39,6 @@ public class Main {
         for (Hospital hospitals : manager.findByName(staff,"Oleh")) {
             System.out.println( hospitals.toString() );
         }
-
-
 
     }
 

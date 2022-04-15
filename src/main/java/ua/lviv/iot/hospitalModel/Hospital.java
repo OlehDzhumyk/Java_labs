@@ -8,14 +8,12 @@ import lombok.*;
 @AllArgsConstructor
 
 public abstract class Hospital {
-
     private final String name;
     private final String degree;
     private final Department department;
     private Integer salary;
     private Integer age;
     private final Integer licenseNumber;
-
     @Override
     public String toString() {
         return name +
