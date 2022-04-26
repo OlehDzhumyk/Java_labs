@@ -13,15 +13,13 @@ public abstract class Hospital {
     private final Department department;
     private Integer salary;
     private Integer age;
-    private final Integer licenseNumber;
     @Override
     public String toString() {
         return name +
                 ", degree:  " + degree  +
                 ", department:  " + department +
                 ", salary:  " + salary +
-                ", age:  " + age +
-                ", licenseNumber: " + licenseNumber;
+                ", age:  " + age;
     }
 
 }

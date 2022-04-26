@@ -16,13 +16,13 @@ public class Application {
 
         List<Hospital> staff = new LinkedList<>();
 
-        staff.add( new Neurosurgeon("Oleh", 38, 1001) );
-        staff.add( new Neurosurgeon("Olena", 43, 1002) );
-        staff.add( new Pediatrician("Andriy", 30, 1003) );
-        staff.add( new Pediatrician("Anastasia", 34, 1004) );
-        staff.add( new Pediatrician("Victoire", 26, 1005) );
-        staff.add( new Paramedic("Sergiy", 25, 1006) );
-        staff.add( new Paramedic("Roman", 27, 1007) );
+        staff.add( new Neurosurgeon("Oleh", 38) );
+        staff.add( new Neurosurgeon("Olena", 43) );
+        staff.add( new Pediatrician("Andriy", 30) );
+        staff.add( new Pediatrician("Anastasia", 34) );
+        staff.add( new Pediatrician("Victoire", 26) );
+        staff.add( new Paramedic("Sergiy", 25) );
+        staff.add( new Paramedic("Roman", 27) );
 
         HospitalManagerImpl manager = new HospitalManagerImpl();
 
