@@ -24,9 +24,4 @@ public abstract class Hospital {
                 ", licenseNumber: " + licenseNumber;
     }
 
-    public void howCanYouHelpMe(){
-        System.out.println("Somehow...");
-
-    }
-
 }

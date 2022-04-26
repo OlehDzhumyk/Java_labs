@@ -10,10 +10,4 @@ public class Pediatrician extends Hospital {
 
     }
 
-    @Override
-    public void howCanYouHelpMe(){
-        System.out.println("I help you if you are a child");
-
-    }
-
 }

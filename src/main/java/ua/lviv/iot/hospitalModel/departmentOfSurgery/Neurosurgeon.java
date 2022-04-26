@@ -10,11 +10,4 @@ public class Neurosurgeon extends Hospital {
 
     }
 
-    @Override
-    public void howCanYouHelpMe(){
-        System.out.println("I help you with your nervous system");
-
-    }
-
-
 }

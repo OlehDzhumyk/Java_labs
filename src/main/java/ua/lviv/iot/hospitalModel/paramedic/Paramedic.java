@@ -10,10 +10,4 @@ public class Paramedic extends Hospital {
 
     }
 
-    @Override
-    public void howCanYouHelpMe(){
-        System.out.println("I help doctor with helping you");
-
-    }
-
 }
