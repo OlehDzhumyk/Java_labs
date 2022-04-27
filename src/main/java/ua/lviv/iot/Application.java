@@ -16,29 +16,30 @@ public class Application {
 
         List<Hospital> staff = new LinkedList<>();
 
-        staff.add( new Neurosurgeon("Oleh", 38) );
-        staff.add( new Neurosurgeon("Olena", 43) );
-        staff.add( new Pediatrician("Andriy", 30) );
-        staff.add( new Pediatrician("Anastasia", 34) );
-        staff.add( new Pediatrician("Victoire", 26) );
-        staff.add( new Paramedic("Sergiy", 25) );
-        staff.add( new Paramedic("Roman", 27) );
+        staff.add( new Neurosurgeon("Oleh", 38) ); //1
+        staff.add( new Neurosurgeon("Olena", 43) ); //0
+        staff.add( new Pediatrician("Andriy", 30) ); //3
+        staff.add( new Pediatrician("Anastasia", 34) ); //2
+        staff.add( new Pediatrician("Victoire", 26) ); //5
+        staff.add( new Paramedic("Sergiy", 25) ); //6
+        staff.add( new Paramedic("Roman", 27) ); //4
 
-        HospitalManagerImpl manager = new HospitalManagerImpl();
+        HospitalManagerImpl hospitalManager = new HospitalManagerImpl();
 
-        for (Hospital hospitals : manager.findByDepartment(staff, Department.DEPARTMENT_OF_PEDIATRICS)) {
+        for (Hospital hospitals : hospitalManager.findByDepartment(staff, Department.DEPARTMENT_OF_PEDIATRICS)) {
             System.out.println(hospitals.toString());
         }
 
         System.out.println();
-        for (Hospital hospitals : manager.sortByAge(staff, false)) {
+        for (Hospital hospitals : hospitalManager.sortByAge(staff, false)) {
             System.out.println( hospitals.toString() );
         }
 
         System.out.println();
-        for (Hospital hospitals : manager.findByName(staff,"Oleh")) {
+        for (Hospital hospitals : hospitalManager.findByName(staff,"Oleh")) {
             System.out.println( hospitals.toString() );
         }
+
 
     }
 

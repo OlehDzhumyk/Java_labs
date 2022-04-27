@@ -6,7 +6,7 @@ import ua.lviv.iot.hospitalModel.Hospital;
 public class Paramedic extends Hospital {
 
     public Paramedic(String name, Integer age) {
-        super(name,"Bachelor", Department.NONE,7_000, age);
+        super(name, "Bachelor", Department.NONE, 7_000, age);
 
     }
 
