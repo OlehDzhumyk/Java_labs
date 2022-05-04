@@ -1,0 +1,10 @@
+Name, Degree, Department, Salary, Age, numberOfOperations
+Oleh, Master, 38, DEPARTMENT_OF_SURGERY, 15000, 25
+Olena, Master, 43, DEPARTMENT_OF_SURGERY, 15000, 34
+Name, Degree, Department, Salary, Age, numberOfCuredChildren
+Andriy, Master, 30, DEPARTMENT_OF_PEDIATRICS, 9000, 1257
+Anastasia, Master, 34, DEPARTMENT_OF_PEDIATRICS, 9000, 5340
+Victoire, Master, 26, DEPARTMENT_OF_PEDIATRICS, 9000, 532
+Name, Degree, Department, Salary, Age, numberOfCleanedRoom
+Sergiy, Bachelor, 25, NONE, 7000, 567
+Roman, Bachelor, 27, NONE, 7000, 310
