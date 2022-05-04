@@ -21,7 +21,7 @@ public abstract class Hospital {
                 ", salary:  " + salary +
                 ", age:  " + age;
     }
-    public String  getHeaders(){
+    public String getHeaders(){
         return "Name, " + "Degree, " + "Department, " + "Salary, " + "Age";
     }
 
