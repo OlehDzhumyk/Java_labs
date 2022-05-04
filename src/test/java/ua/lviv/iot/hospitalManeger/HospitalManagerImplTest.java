@@ -23,13 +23,13 @@ class HospitalManagerImplTest {
     void setUp() {
         hospitalManager = new HospitalManagerImpl();
         staff = new LinkedList<>();
-        staff.add( new Neurosurgeon("Oleh", 38) );
-        staff.add( new Neurosurgeon("Olena", 43) );
-        staff.add( new Pediatrician("Andriy", 30) );
-        staff.add( new Pediatrician("Anastasia", 34) );
-        staff.add( new Pediatrician("Victoire", 26) );
-        staff.add( new Paramedic("Sergiy", 25) );
-        staff.add( new Paramedic("Roman", 27) );
+        staff.add( new Neurosurgeon("Oleh", 38, 25) );
+        staff.add( new Neurosurgeon("Olena", 43, 34) );
+        staff.add( new Pediatrician("Andriy", 30, 1257) );
+        staff.add( new Pediatrician("Anastasia", 34, 5340) );
+        staff.add( new Pediatrician("Victoire", 26,532) );
+        staff.add( new Paramedic("Sergiy", 25, 567) );
+        staff.add( new Paramedic("Roman", 27, 310) );
         expected = new ArrayList<>();
 
     }
@@ -88,5 +88,7 @@ class HospitalManagerImplTest {
             fail();
 
     }
+
+
 
 }

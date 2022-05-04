@@ -21,5 +21,16 @@ public abstract class Hospital {
                 ", salary:  " + salary +
                 ", age:  " + age;
     }
+    public String  getHeaders(){
+        return "Name, " + "Degree, " + "Department, " + "Salary, " + "Age";
+    }
+
+    public String toCSV(){
+        return this.name + ", " +
+                this.degree + ", " +
+                this.age + ", " +
+                this.department + ", " +
+                this.salary;
+    }
 
 }
