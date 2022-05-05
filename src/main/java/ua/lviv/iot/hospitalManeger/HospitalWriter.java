@@ -2,12 +2,12 @@ package ua.lviv.iot.hospitalManeger;
 
 
 import ua.lviv.iot.hospitalModel.Hospital;
-
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
 
 public class HospitalWriter {
+
 
     public static void writeToFile(List<Hospital> staff) throws IOException {
 
