@@ -12,12 +12,12 @@ public class Paramedic extends Hospital {
         this.numberOfCleanedRoom = numberOfCleanedRoom;
     }
     @Override
-    public String toCSV(){
+    public String toCSV() {
         return super.toCSV() + ", " + numberOfCleanedRoom;
     }
 
     @Override
-    public String  getHeaders(){
+    public String  getHeaders() {
         return super.getHeaders() + ", numberOfCleanedRoom";
     }
 
