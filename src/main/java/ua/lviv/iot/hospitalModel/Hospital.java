@@ -27,7 +27,7 @@ public class Hospital {
     }
 
     public String getHeaders() {
-        return "Name, " + "Degree, " + "Department, " + "Salary, " + "Age";
+        return "Name, Degree, Department, Salary, Age";
     }
 
     public String toCSV() {

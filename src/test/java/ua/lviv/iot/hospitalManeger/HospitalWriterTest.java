@@ -7,6 +7,7 @@ import ua.lviv.iot.hospitalModel.Hospital;
 import ua.lviv.iot.hospitalModel.departmentOfPediatrics.Pediatrician;
 import ua.lviv.iot.hospitalModel.departmentOfSurgery.Neurosurgeon;
 import ua.lviv.iot.hospitalModel.paramedic.Paramedic;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -20,18 +21,14 @@ class HospitalWriterTest {
     @BeforeEach
     public void setUp() {
         staff = new LinkedList<>();
-        staff.add( new Neurosurgeon("Oleh", 38, 25) );
-        staff.add( new Neurosurgeon("Olena", 43, 34) );
-        staff.add( new Pediatrician("Andriy", 30, 1257) );
-        staff.add( new Pediatrician("Anastasia", 34, 5340) );
-        staff.add( new Pediatrician("Victoire", 26,532) );
-        staff.add( new Paramedic("Sergiy", 25, 567) );
-        staff.add( new Paramedic("Roman", 27, 310) );
-        try {
-            HospitalWriter.writeToFile(staff);
-        } catch (IOException e) {
-            System.out.println("Nu vse Exception");
-        }
+        staff.add(new Neurosurgeon("Oleh", 38, 25));
+        staff.add(new Neurosurgeon("Olena", 43, 34));
+        staff.add(new Pediatrician("Andriy", 30, 1257));
+        staff.add(new Pediatrician("Anastasia", 34, 5340));
+        staff.add(new Pediatrician("Victoire", 26, 532));
+        staff.add(new Paramedic("Sergiy", 25, 567));
+        staff.add(new Paramedic("Roman", 27, 310));
+        HospitalWriter.writeToFile(staff);
     }
 
     @Test
