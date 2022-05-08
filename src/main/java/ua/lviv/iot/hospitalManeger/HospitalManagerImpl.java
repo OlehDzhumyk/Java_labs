@@ -7,7 +7,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class HospitalManagerImpl implements HospitalManager{
+public class HospitalManagerImpl implements HospitalManager {
 
     @Override
     public List<Hospital> sortByAge(List<Hospital> staff, boolean inAscendingOrder) {
@@ -20,7 +20,7 @@ public class HospitalManagerImpl implements HospitalManager{
     }
 
     @Override
-    public List<Hospital> findByName(List<Hospital> staff,String name) {
+    public List<Hospital> findByName(List<Hospital> staff, String name) {
         return staff.stream()
                 .filter(hospital -> hospital.getName().equals(name))
                 .collect(Collectors.toList());
@@ -32,7 +32,5 @@ public class HospitalManagerImpl implements HospitalManager{
                 .filter(hospital -> hospital.getDepartment().equals(department))
                 .collect(Collectors.toList());
     }
-
-
 
 }

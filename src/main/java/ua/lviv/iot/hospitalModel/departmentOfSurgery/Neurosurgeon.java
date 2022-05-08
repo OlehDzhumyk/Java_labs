@@ -5,16 +5,19 @@ import ua.lviv.iot.hospitalModel.Hospital;
 
 public class Neurosurgeon extends Hospital {
 
-    public Neurosurgeon(String name, Integer age, Integer licenseNumber) {
-        super(name,"Master", Department.DEPARTMENT_OF_SURGERY, 15_000, age, licenseNumber);
+    public Integer numberOfOperations;
 
+    public Neurosurgeon(String name, Integer age, Integer numberOfOperations) {
+        super(name, "Master", Department.DEPARTMENT_OF_SURGERY, 15_000, age);
+        this.numberOfOperations = numberOfOperations;
     }
-
     @Override
-    public void howCanYouHelpMe(){
-        System.out.println("I help you with your nervous system");
-
+    public String toCSV() {
+        return super.toCSV() + ", " + numberOfOperations;
     }
-
+    @Override
+    public String getHeaders() {
+        return super.getHeaders() + ", " + "numberOfOperations";
+    }
 
 }

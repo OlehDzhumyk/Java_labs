@@ -5,15 +5,20 @@ import ua.lviv.iot.hospitalModel.Hospital;
 
 public class Paramedic extends Hospital {
 
-    public Paramedic(String name, Integer age, Integer licenseNumber) {
-        super(name,"Bachelor", Department.NONE,7_000, age, licenseNumber);
+    Integer numberOfCleanedRoom;
 
+    public Paramedic(String name, Integer age, Integer numberOfCleanedRoom) {
+        super(name, "Bachelor", Department.NONE, 7_000, age);
+        this.numberOfCleanedRoom = numberOfCleanedRoom;
+    }
+    @Override
+    public String toCSV() {
+        return super.toCSV() + ", " + numberOfCleanedRoom;
     }
 
     @Override
-    public void howCanYouHelpMe(){
-        System.out.println("I help doctor with helping you");
-
+    public String  getHeaders() {
+        return super.getHeaders() + ", numberOfCleanedRoom";
     }
 
 }
