@@ -3,7 +3,6 @@ package ua.lviv.iot.hospitalModel.paramedic;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import ua.lviv.iot.hospitalModel.paramedic.Paramedic;
 
 public class ParamedicTest {
 
