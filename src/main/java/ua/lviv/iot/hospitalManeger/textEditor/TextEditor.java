@@ -2,7 +2,8 @@ package ua.lviv.iot.hospitalManeger.textEditor;
 
 import lombok.AllArgsConstructor;
 
-import java.io.*;
+import java.io.File;
+import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
@@ -24,13 +25,13 @@ public class TextEditor {
             }
 
             text = result.toString();
-        } catch (FileNotFoundException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
         return text;
     }
 
-    public List<String> editText(char letter) {
+    public List<String> returnAllSecondWordsStartedBy(char letter) {
         List<String> outPut = new LinkedList<>();
         String text = getTextFromFile(pathToInput);
         for (String sentence : divOnSentences(text)) {
@@ -42,9 +43,14 @@ public class TextEditor {
         return outPut;
     }
 
-    private static List<String> divOnSentences(String text) {
-        LinkedList<String> sentence = new LinkedList<>();
+    private List<String> divOnSentences(String text) {
         Pattern pattern = Pattern.compile("\\w[^[.!?:\\n\\r]]*[.!?]");
+
+        return divideByPattern(text, pattern);
+    }
+
+    private LinkedList<String> divideByPattern(String text, Pattern pattern) {
+        LinkedList<String> sentence = new LinkedList<>();
         Matcher matcher = pattern.matcher(text);
         while (matcher.find()) {
             sentence.add(text.substring(matcher.start(), matcher.end()));
@@ -54,19 +60,12 @@ public class TextEditor {
         return sentence;
     }
 
-    private static List<String> divOnWords(String sentence) {
-        LinkedList<String> words = new LinkedList<>();
+    private List<String> divOnWords(String sentence) {
         Pattern pattern = Pattern.compile("[^\\s(.!?,:;\")]+");
-        Matcher matcher = pattern.matcher(sentence);
-        while (matcher.find()) {
-            words.add(sentence.substring(matcher.start(), matcher.end()));
-            sentence = sentence.substring(matcher.end());
-            matcher = pattern.matcher(sentence);
-        }
-        return words;
+        return divideByPattern(sentence, pattern);
     }
 
-    public List<String> editText2(int length) {
+    public List<String> returnWordWithLengthGreaterThen(int length) {
         String text = getTextFromFile(pathToInput);
         List<String> alreadyPrintedWords = new LinkedList<>();
         for (String sentence : divOnSentences(text)) {
@@ -82,6 +81,6 @@ public class TextEditor {
             }
         }
         return alreadyPrintedWords;
-}
+    }
 
 }

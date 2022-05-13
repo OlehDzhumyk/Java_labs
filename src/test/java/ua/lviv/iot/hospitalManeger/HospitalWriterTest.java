@@ -28,11 +28,11 @@ class HospitalWriterTest {
         staff.add(new Pediatrician("Victoire", 26, 532));
         staff.add(new Paramedic("Sergiy", 25, 567));
         staff.add(new Paramedic("Roman", 27, 310));
-        HospitalWriter.writeToFile(staff);
     }
 
     @Test
-    void fileEqualTest() {
+    public void fileEqualTest() {
+        HospitalWriter.writeToFile(staff);
         try (
                 FileReader expected = new FileReader("src/test/testResources/doctorList/expected.csv");
                 BufferedReader expectedBuf = new BufferedReader(expected);
@@ -46,8 +46,9 @@ class HospitalWriterTest {
                 Assertions.assertEquals(expectedBuf.readLine(), line = actualBuf.readLine());
             }
         } catch (IOException e) {
-            System.out.println("Nu vse Exception");
+            e.printStackTrace();
         }
     }
 
 }
+

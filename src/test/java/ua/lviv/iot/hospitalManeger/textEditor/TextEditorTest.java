@@ -1,9 +1,8 @@
-package ua.lviv.iot.textEditor;
+package ua.lviv.iot.hospitalManeger.textEditor;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import ua.lviv.iot.hospitalManeger.textEditor.TextEditor;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,8 +18,8 @@ class TextEditorTest {
     }
 
     @Test
-    public void editTextTest() {
-        List<String> actual = text.editText('a');
+    public void testReturnAllSecondWordsStartedBy() {
+        List<String> actual = text.returnAllSecondWordsStartedBy('a');
         List<String> expected = new ArrayList<>();
         expected.add("am");
         expected.add("about");
@@ -31,8 +30,8 @@ class TextEditorTest {
     }
 
     @Test
-    public void editText2Test() {
-        List<String> actual =  text.editText2(3);
+    public void testReturnWordWithLengthGreaterThen() {
+        List<String> actual =  text.returnWordWithLengthGreaterThen(3);
         List<String> expected = new ArrayList<>();
         expected.add("how");
         expected.add("are");
